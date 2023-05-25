@@ -15,6 +15,10 @@ const authOptions = {
 //   database: process.env.DATABASE_URL,
 };
 
+console.log("authOptions")
+console.log(process.env.GOOGLE_ID)
+console.log(process.env.GOOGLE_SECRET)
+
 const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };
