@@ -12,12 +12,14 @@ const authOptions = {
   ],
 
   // A database is optional, but required to persist accounts in a database
-//   database: process.env.DATABASE_URL,
+  //   database: process.env.DATABASE_URL,
+  secret: process.env.NEXTAUTH_SECRET,
 };
 
-console.log("authOptions")
-console.log(process.env.GOOGLE_ID)
-console.log(process.env.GOOGLE_SECRET)
+console.log("authOptions");
+console.log(process.env.GOOGLE_ID);
+console.log(process.env.GOOGLE_SECRET);
+console.log(process.env.NEXTAUTH_SECRET);
 
 const handler = NextAuth(authOptions);
 
