@@ -1,4 +1,5 @@
 import { useSession } from "next-auth/react";
+import Image from "next/image";
 
 interface User {
   name?: string;
@@ -23,7 +24,7 @@ export const UserDisplay = () => {
       <div>
         <h2>Welcome, {user?.name}</h2>
         <h3>Email: {user?.email}</h3>
-        <img src={user?.image || ""} alt="User avatar" />
+        <Image src={user?.image || ""} alt="User avatar" />
         <h4>Session Expires: {expires}</h4>
       </div>
     );
