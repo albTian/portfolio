@@ -8,7 +8,6 @@ const AboutPage = () => {
   const { data: session } = useSession({
     required: true,
     onUnauthenticated() {
-        console.log("UNAUTHENTICATED!!")
         redirect("/")
     },
   });
